@@ -1,7 +1,4 @@
 {
-  "name": "@whyk/greeting",
-  "version": "0.0.2",
-  "exports": "./main.ts",
   "tasks": {
     "dev": "deno run --watch main.ts",
     "check": "deno fmt --check && deno lint && deno check **/*.ts"
