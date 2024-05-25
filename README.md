@@ -12,6 +12,10 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [x] GitHub Releaseを自動で追加する
 - [ ] モノレポ構成で複数のJSRパッケージが公開できるか試す
 
+### エラー解決
+#### GitHub ActionsでGitHub Releasesが生成できない
+`jobs.<job_name>.permissions.contents`が`write`になっていなかった
+
 ## 公開先
 - [@whyk/greeting](https://jsr.io/@whyk/greeting)
 
@@ -22,4 +26,4 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [エラー: 403 "統合によってリソースにアクセスできません" - GitHub Docs](https://docs.github.com/ja/code-security/code-scanning/troubleshooting-code-scanning/resource-not-accessible)
 - [Github ActionsでResource not accessible by integrationが出た際の対処法](https://zenn.dev/tatsugon/articles/github-actions-permission-error)
 - [GITHUB_TOKEN のアクセス許可の変更 - 自動トークン認証 - GitHub Docs](https://docs.github.com/ja/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token)
-- [ギットハブ　アクション　のワークフロー構文 - GitHub Docs](https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#permissions)
+- [permissions - GitHub Actionsのワークフロー構文 - GitHub Docs](https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#permissions)
