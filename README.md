@@ -1,4 +1,4 @@
-# Learn JSR([@whyk/greeting](https://jsr.io/@whyk/greeting))
+# Learn JSR
 
 ## 本リポジトリの目的
 Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッケージを公開してみる。  
@@ -8,8 +8,12 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [x] 初期プロジェクトを立ち上げてJSRに公開する
 - [x] deno.jsonのバージョンを更新せずに関数を追加して公開されないことを確認する
 - [x] deno.jsonのバージョンを更新して関数を追加して公開されることを確認する
-- [ ] パッケージのバージョンとGit Tagのバージョンを連動させる
-- [ ] GitHub Releaseを自動で追加する
+- [x] パッケージのバージョンとGit Tagのバージョンを連動させる
+- [x] GitHub Releaseを自動で追加する
+- [ ] モノレポ構成で複数のJSRパッケージが公開できるか試す
+
+## 公開先
+- [@whyk/greeting](https://jsr.io/@whyk/greeting)
 
 ## 参考資料
 - [@whyk/greetingの公開方法案内ページ](https://jsr.io/@whyk/greeting/publish)
