@@ -92,10 +92,5 @@
       }
     }
   },
-  "remote": {},
-  "workspace": {
-    "dependencies": [
-      "jsr:@std/cli@^0.224.6"
-    ]
-  }
+  "remote": {}
 }
