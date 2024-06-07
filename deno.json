@@ -4,8 +4,5 @@
     "check": "deno fmt --check && deno lint && deno check **/*.ts",
     "update": "deno run -A scripts/create-jsr-config.ts"
   },
-  "exclude": ["README.md"],
-  "imports": {
-    "@std/cli": "jsr:@std/cli@^0.224.6"
-  }
+  "exclude": ["README.md"]
 }
