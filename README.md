@@ -10,7 +10,7 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [x] deno.jsonのバージョンを更新して関数を追加して公開されることを確認する
 - [x] パッケージのバージョンとGit Tagのバージョンを連動させる
 - [x] GitHub Releaseを自動で追加する
-- [ ] モノレポ構成で複数のJSRパッケージが公開できるか試す
+- [ ] JSRでサブパッケージが公開できるか試す
 
 ### エラー解決
 #### GitHub ActionsでGitHub Releasesが生成できない
