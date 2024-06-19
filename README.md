@@ -11,7 +11,8 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [x] パッケージのバージョンとGit Tagのバージョンを連動させる
 - [x] GitHub Releaseを自動で追加する
 - [x] JSRでサブパッケージが公開できるか試す
-- [ ] lintとimportsが効く方法を検討する
+- [x] JSRのlintが効かない問題を解決する
+- [ ] importがエラーになる問題を解決する
 
 ### エラー解決
 #### GitHub ActionsでGitHub Releasesが生成できない
