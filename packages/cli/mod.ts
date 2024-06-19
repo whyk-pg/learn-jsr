@@ -1,4 +1,4 @@
-import { parseArgs } from "jsr:@std/cli@^0.224.6";
+import { parseArgs } from "@std/cli";
 
 export const cli = (): void => {
   const args = parseArgs(Deno.args);
