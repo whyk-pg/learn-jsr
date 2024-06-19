@@ -14,7 +14,7 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-      - name: Check
+      - name: Check without slow type
         run: deno task check
       - name: Test
         run: deno test

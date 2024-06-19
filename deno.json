@@ -2,6 +2,7 @@
   "tasks": {
     "dev": "deno run main.ts",
     "check": "deno fmt --check && deno lint && deno check **/*.ts",
+    "lint": "deno run -A scripts/lint-jsr.ts",
     "update": "deno run -A scripts/create-jsr-config.ts"
   },
   "exclude": ["README.md"]
