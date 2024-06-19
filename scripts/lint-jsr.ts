@@ -1,13 +1,14 @@
 import { $ } from "jsr:@david/dax@^0.40.1";
-import { getJsrConfig } from "./config.ts";
+import {
+  CONFIG_FILE_NAME,
+  getJsrVersionConfig,
+  mergeConfigFile,
+} from "./config.ts";
 
-const jsrConfig = getJsrConfig("v0.0.0");
-const CONFIG_FILE_NAME = "deno.json";
-const configFileData = JSON.parse(await Deno.readTextFile(CONFIG_FILE_NAME));
-const mergedConfigFileData = {
-  ...jsrConfig,
-  ...configFileData,
-};
+const jsrConfig = getJsrVersionConfig("v0.0.0");
+const { mergedConfigFileData, configFileData } = await mergeConfigFile(
+  jsrConfig,
+);
 
 const encoder = new TextEncoder();
 await Deno.writeFile(

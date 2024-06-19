@@ -1,9 +1,16 @@
-export const getJsrConfig = (version: string) => ({
-  name: "@whyk/greeting",
+export const CONFIG_FILE_NAME = "deno.json";
+export const getJsrVersionConfig = (version: string) => ({
   version,
-  exports: {
-    ".": "./main.ts",
-    "./core": "./packages/core/mod.ts",
-    "./cli": "./packages/cli/mod.ts",
-  },
 });
+export const mergeConfigFile = async (jsrConfig: { version: string }) => {
+  const configFileData = JSON.parse(await Deno.readTextFile(CONFIG_FILE_NAME));
+  const mergedConfigFileData = {
+    ...jsrConfig,
+    ...configFileData,
+  };
+
+  return {
+    configFileData,
+    mergedConfigFileData,
+  };
+};

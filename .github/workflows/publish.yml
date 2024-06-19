@@ -35,4 +35,4 @@ jobs:
       - name: Publish JSR
         run: |
           deno task update ${{ steps.tag_version.outputs.new_tag }}
-          deno publish --config jsr.json
+          deno publish
