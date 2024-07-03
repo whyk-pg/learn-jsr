@@ -6,7 +6,7 @@ on:
 jobs:
   check:
     if: github.event.pull_request.merged == true
-    uses: whyk-pg/learn-jsr/.github/workflows/reuse_check.yml
+    uses: whyk-pg/learn-jsr/.github/workflows/reuse_check.yml@create-pr
   publish:
     runs-on: ubuntu-latest
     needs: [check]
