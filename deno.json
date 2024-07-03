@@ -1,6 +1,6 @@
 {
   "name": "@whyk/greeting",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "exports": {
     ".": "./main.ts",
     "./core": "./packages/core/mod.ts",
