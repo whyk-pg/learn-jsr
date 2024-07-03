@@ -7,14 +7,4 @@ on:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
-      - name: Check
-        run: deno task check
-      - name: Test
-        run: deno test
+    uses: whyk-pg/learn-jsr/.github/workflows/reuse_check.yml
