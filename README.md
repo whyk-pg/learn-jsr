@@ -12,7 +12,7 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [x] GitHub Releaseを自動で追加する
 - [x] JSRでサブパッケージが公開できるか試す
 - [x] JSRのlintが効かない問題を解決する
-- [ ] importがエラーになる問題を解決する
+- [x] importがエラーになる問題を解決する
 
 ### エラー解決
 #### GitHub ActionsでGitHub Releasesが生成できない
