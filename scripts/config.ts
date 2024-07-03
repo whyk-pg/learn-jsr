@@ -5,8 +5,8 @@ export const getJsrVersionConfig = (version: string) => ({
 export const mergeConfigFile = async (jsrConfig: { version: string }) => {
   const configFileData = JSON.parse(await Deno.readTextFile(CONFIG_FILE_NAME));
   const mergedConfigFileData = {
-    ...jsrConfig,
     ...configFileData,
+    ...jsrConfig,
   };
 
   return {
