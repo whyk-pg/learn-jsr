@@ -7,4 +7,4 @@ on:
 
 jobs:
   check:
-    uses: whyk-pg/learn-jsr/.github/workflows/reuse_check.yml@create-pr
+    uses: whyk-pg/learn-jsr/.github/workflows/reuse_check.yml@main
