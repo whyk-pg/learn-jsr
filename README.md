@@ -1,4 +1,7 @@
 # Learn JSR
+<!-- ![Status: ToDo](https://flat.badgen.net/static/Status/ToDo/red) -->
+![Status: In Progress](https://flat.badgen.net/static/Status/In%20Progress/yellow)
+<!-- ![Status: Done](https://flat.badgen.net/static/Status/Done/green) -->
 
 ## 本リポジトリの目的
 Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッケージを公開してみる。  
@@ -13,6 +16,7 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [x] JSRでサブパッケージが公開できるか試す
 - [x] JSRのlintが効かない問題を解決する
 - [x] importがエラーになる問題を解決する
+- [ ] Squash mergeと`npm:changesets/cli`を使って、PR単位で機能をまとめたリリースができるか試す
 
 ### エラー解決
 #### GitHub ActionsでGitHub Releasesが生成できない
@@ -35,3 +39,4 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [Github Actions の workflow run について](https://zenn.dev/keitacoins/articles/2a715be45e874f)
 - [ワークフローの再利用 - GitHub Docs](https://docs.github.com/ja/actions/using-workflows/reusing-workflows)
 - [\[github actions\] Reusable workflowsが実装されたのでざっとまとめ](https://zenn.dev/jerome/articles/618af7cc934f2f)
+- [changesetsを使ってWebサイトのバージョン管理を自動化する](https://zenn.dev/108yen/articles/358d9c7201b238)
