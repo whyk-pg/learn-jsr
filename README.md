@@ -16,11 +16,39 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [x] JSRでサブパッケージが公開できるか試す
 - [x] JSRのlintが効かない問題を解決する
 - [x] importがエラーになる問題を解決する
-- [ ] Squash mergeと`npm:changesets/cli`を使って、PR単位で機能をまとめたリリースができるか試す
+- [x] Squash mergeと`npm:changesets/cli`を使って、PR単位で機能をまとめたリリースができるか試す
+- [ ] リリーススクリプトを調整して、コマンドを叩いたらPRが作成されるように修正
 
 ### エラー解決
 #### GitHub ActionsでGitHub Releasesが生成できない
 `jobs.<job_name>.permissions.contents`が`write`になっていなかった
+
+#### 素のDenoでchangesetsが使えない
+`changesets init`は動作したが、`changesets version`が以下のエラーが出て動作しない
+
+```sh
+$ deno run npm:@changesets/cli@2.27.12 version
+✅ Granted all env access.
+✅ Granted all read access.
+✅ Granted all sys access.
+🦋  error Error: No package.json could be found upwards from the directory /home/windchime-yk/dev/playground/learn-jsr
+🦋  error     at _callee4$ (file:///home/windchime-yk/.cache/deno/npm/registry.npmjs.org/@manypkg/find-root/1.1.0/dist/find-root.cjs.dev.js:217:19)
+🦋  error     at tryCatch (file:///home/windchime-yk/.cache/deno/npm/registry.npmjs.org/@babel/runtime/7.26.7/helpers/regeneratorRuntime.js:45:16)
+🦋  error     at Generator.<anonymous> (file:///home/windchime-yk/.cache/deno/npm/registry.npmjs.org/@babel/runtime/7.26.7/helpers/regeneratorRuntime.js:133:17)
+🦋  error     at Generator.next (file:///home/windchime-yk/.cache/deno/npm/registry.npmjs.org/@babel/runtime/7.26.7/helpers/regeneratorRuntime.js:74:21)
+🦋  error     at asyncGeneratorStep (file:///home/windchime-yk/.cache/deno/npm/registry.npmjs.org/@babel/runtime/7.26.7/helpers/asyncToGenerator.js:3:17)
+🦋  error     at _next (file:///home/windchime-yk/.cache/deno/npm/registry.npmjs.org/@babel/runtime/7.26.7/helpers/asyncToGenerator.js:17:9)
+🦋  error     at eventLoopTick (ext:core/01_core.js:177:7) {
+🦋  error   directory: '/home/windchime-yk/dev/playground/learn-jsr'
+🦋  error }
+```
+これは書いてあるとおり、今のプロジェクトに`package.json`が存在しないためエラーになっている  
+実際のところ、Denoは`package.json`もカバーしているので利用可能かもしれないが、私個人が`deno.jsonc`でやっていきたいためchangesetsは使わない方針とする
+changesetsのDeno対応は開発リソースの都合でメンテナは着手しづらい状況になっているようで、コミュニティ側が対応しない限りは難しいと考えられる
+https://github.com/changesets/changesets/discussions/824
+
+Deno公式は、標準ライブラリのリリースに自前のリリースライブラリである[`@deno/bump-workspaces`](https://jsr.io/@deno/bump-workspaces)を使っている  
+Freshはリポジトリを見る限りでは手動な模様
 
 ## 公開先
 - [@whyk/greeting](https://jsr.io/@whyk/greeting)
