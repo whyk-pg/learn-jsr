@@ -1,5 +1,5 @@
-import { $ } from "jsr:@david/dax@^0.40.1";
-import { parseArgs } from "jsr:@std/cli@^0.224.0";
+import { $ } from "@david/dax";
+import { parseArgs } from "@std/cli";
 import {
   CONFIG_FILE_NAME,
   getJsrVersionConfig,

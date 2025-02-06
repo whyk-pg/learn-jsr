@@ -1,4 +1,4 @@
-import { $ } from "jsr:@david/dax@^0.40.1";
+import { $ } from "@david/dax";
 import {
   CONFIG_FILE_NAME,
   getJsrVersionConfig,
