@@ -16,9 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
       - name: Get new git tag
         id: tag_version_dry_run
         uses: mathieudutour/github-tag-action@v6.2
