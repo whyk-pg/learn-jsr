@@ -19,6 +19,21 @@ Deno社が始めた新しいレジストリ『[JSR](https://jsr.io)』にパッ�
 - [x] Squash mergeと`npm:changesets/cli`を使って、PR単位で機能をまとめたリリースができるか試す
 - [ ] リリーススクリプトを調整して、コマンドを叩いたらPRが作成されるように修正
 
+### リリース手順
+ここに自作リリーススクリプト(仮称:Kugiri)を使ったリリース手順を書く
+
+#### セルフ更新
+1. `deno task release`を叩く
+2. 以前のタグ以降のすべてのGitログを浚って、プレフィックスを読み出し配列に押し込む
+3. 読み出されたプレフィックスからメジャーやマイナーバージョンなど、どのバージョンを更新するかを決定する
+
+#### changesets Actions互換
+1. `deno task release --md`を叩く
+2. releaseコマンドがどのバージョンに更新するかをMarkdownに書き込む
+3. Gitタグを打ち込む
+4. リモートブランチにあげる
+5. mainブランチに取り込み、changesetsのActionsを叩く
+
 ### エラー解決
 #### GitHub ActionsでGitHub Releasesが生成できない
 `jobs.<job_name>.permissions.contents`が`write`になっていなかった
@@ -68,3 +83,4 @@ Freshはリポジトリを見る限りでは手動な模様
 - [ワークフローの再利用 - GitHub Docs](https://docs.github.com/ja/actions/using-workflows/reusing-workflows)
 - [\[github actions\] Reusable workflowsが実装されたのでざっとまとめ](https://zenn.dev/jerome/articles/618af7cc934f2f)
 - [changesetsを使ってWebサイトのバージョン管理を自動化する](https://zenn.dev/108yen/articles/358d9c7201b238)
+- [セマンティック バージョニング 2.0.0 | Semantic Versioning](https://semver.org/lang/ja/)
